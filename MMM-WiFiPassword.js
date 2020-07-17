@@ -50,7 +50,7 @@ Module.register("MMM-WiFiPassword", {
 	  }
 	  
 	  var header = document.createElement('header');
-	  header.innerHTML = "Local WiFi Details";
+	  header.innerHTML = "Gäste WLAN";
 	  div.appendChild(header);
 	  
 	  var qrDiv = document.createElement("div");
@@ -72,28 +72,28 @@ Module.register("MMM-WiFiPassword", {
 	  if (this.config.showNetwork) {
 		var networkNameDiv = document.createElement("p");
 		networkNameDiv.className = "text network";
-		networkNameDiv.innerHTML = "<b>Network:</b> " + this.config.network;
+		networkNameDiv.innerHTML = "<b>Name:</b> " + this.config.network;
 		textDiv.appendChild(networkNameDiv);
 	  }
 	  
 	  if (this.config.showPassword) {
 		var networkPassDiv = document.createElement("p");
 	  	networkPassDiv.className = "text password";
-	  	networkPassDiv.innerHTML = "<b>Password:</b> " + this.config.password;
+	  	networkPassDiv.innerHTML = "<b>Passwort:</b> " + this.config.password;
 	  	textDiv.appendChild(networkPassDiv);
 	  }
 	 
 	  if (this.config.showAuthType) {
 		var networkTypeDiv = document.createElement("p");
 	  	networkTypeDiv.className = "text network-type";
-	  	networkTypeDiv.innerHTML = "<b>Authentication Type:</b> " + this.config.authType.toUpperCase();
+	  	networkTypeDiv.innerHTML = "<b>Verschlüsselung:</b> " + this.config.authType.toUpperCase();
 	  	textDiv.appendChild(networkTypeDiv);
 	  }
 	  
 	  if (this.config.debug) {
 		var debugDiv = document.createElement("p");
 		debugDiv.className = "text debug";
-		debugDiv.innerHTML = "<b>QR String:</b> " + this.qrText;
+		debugDiv.innerHTML = "<b>QR Code:</b> " + this.qrText;
 		textDiv.appendChild(debugDiv);
 	  }
 	  	  
